@@ -208,6 +208,8 @@ bar {
 
 # Start some apps 
 exec --no-startup-id dropbox start
+exec --no-startup-id clipit
+exec --no-startup-id minetime
 exec_always --no-startup-id feh --bg-fill ~/.wallpaper
 exec_always --no-startup-id start-pulseaudio-x11
 exec_always --no-startup-id mate-settings-daemon
@@ -234,3 +236,14 @@ bindsym $ctrl+$alt+e exec pluma
 
 # Lock screen
 bindsym $ctrl+$alt+l exec i3lock-fancy -gp -- scrot -z
+
+# Mumble config
+for_window [instance="mumble"] floating enable
+for_window [instance="mumble"] resize set 300 800
+
+# Peek config
+for_window [instance="peek"] floating enable
+for_window [instance="peek"] resize set 800 800
+
+# disable mouse focus
+focus_follows_mouse no
