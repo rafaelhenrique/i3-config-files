@@ -232,6 +232,7 @@ bindsym Print exec mate-screenshot -i
 bindsym $ctrl+$alt+n exec caja
 
 # Simple editor
+bindsym $ctrl+$alt+g exec pluma
 bindsym $ctrl+$alt+e exec pluma
 
 # Lock screen
