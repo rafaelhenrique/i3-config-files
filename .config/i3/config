@@ -213,6 +213,7 @@ exec --no-startup-id minetime
 exec_always --no-startup-id feh --bg-fill ~/.wallpaper
 exec_always --no-startup-id start-pulseaudio-x11
 exec_always --no-startup-id mate-settings-daemon
+exec_always --no-startup-id compton
 
 ## Sound
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/bin/pavolume.pl +5% #increase sound volume
