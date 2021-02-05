@@ -215,16 +215,22 @@ exec_always --no-startup-id start-pulseaudio-x11
 exec_always --no-startup-id mate-settings-daemon
 exec_always --no-startup-id compton
 
-## Sound
+## Sound with multimedia keys
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/bin/pavolume.pl +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/bin/pavolume.pl -5%  #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
 bindsym XF86Favorites exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
 
+## Sound withoud multimedia keys
+# bindsym F2 exec --no-startup-id ~/.config/i3/bin/pavolume.pl +5% #increase sound volume
+# bindsym F1 exec --no-startup-id ~/.config/i3/bin/pavolume.pl -5%  #decrease sound volume
+# bindsym F3 exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
+# bindsym F4 exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
+
 ## Media player control
-# bindsym XF86AudioPlay exec playerctl play-pause
-# bindsym XF86AudioNext exec playerctl next
-# bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshot
 bindsym Print exec mate-screenshot -i
