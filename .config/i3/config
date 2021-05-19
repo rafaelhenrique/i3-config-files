@@ -227,6 +227,16 @@ bindsym XF86Favorites exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle #
 # bindsym F3 exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
 # bindsym F4 exec --no-startup-id ~/.config/i3/bin/pavolume.pl toggle # mute sound
 
+## Brightness control
+# bindsym XF86MonBrightnessUp exec xrandr --output DP-0 --brightness 1.0 # increase brightness
+# bindsym XF86MonBrightnessDown exec xrandr --output DP-0 --brightness 0.7 # decrease brightness
+# bindsym XF86MonBrightnessUp exec xrandr --output HDMI-0 --brightness 1.0 # increase brightness
+# bindsym XF86MonBrightnessDown exec xrandr --output HDMI-0 --brightness 0.7 # decrease brightness
+
+## Brightness control
+bindsym $mod+$alt+F1 exec xrandr --output DP-0 --brightness 1.0 && xrandr --output HDMI-0 --brightness 1.0 # increase brightness
+bindsym $mod+$alt+F2 exec xrandr --output DP-0 --brightness 0.7 && xrandr --output HDMI-0 --brightness 0.7  # decrease brightness
+
 ## Media player control
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
